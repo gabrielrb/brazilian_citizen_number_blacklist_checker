@@ -1,0 +1,2 @@
+class CitizensNumbersController < ApplicationController
+end
