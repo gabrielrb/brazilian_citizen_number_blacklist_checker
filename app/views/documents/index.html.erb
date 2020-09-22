@@ -1,0 +1,23 @@
+<div class="container">
+  <%= simple_form_for :search, url: root_path, method: "GET" do |f| %>
+    <%= f.input :number, input_html: {value: ""}, label: "CPF:" %>
+    <%= f.submit "Procurar", class: "btn btn-primary" %>
+  <% end %>
+  <% if @document.present? %>
+    <div class="col-xs-12 col-sm-8 offset-sm-2">
+      <h1>CPF: <%= @document_number %> - BLOCK</h1>
+      <%= link_to "Remover da lista", document_path(@document), method: :delete, data: { confirm: 'Você tem certeza que deseja excluir este CPF da lista?' }, class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  <% if @document.nil? && @document_number.present? %>
+    <div class="col-xs-12 col-sm-8 offset-sm-2">
+      <h1>CPF: <%= @document_number %> - FREE</h1>
+    </div>
+    <div>
+      <%= simple_form_for (@new_document) do |f| %>
+        <%= f.input :number, as: :hidden, input_html: { value: @document_number } %>
+        <%= f.submit 'Incluir na lista', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

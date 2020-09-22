@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CitizenNumberTest < ActiveSupport::TestCase
+class DocumentsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

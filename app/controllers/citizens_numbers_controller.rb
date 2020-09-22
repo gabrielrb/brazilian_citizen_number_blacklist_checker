@@ -1,2 +1,0 @@
-class CitizensNumbersController < ApplicationController
-end
