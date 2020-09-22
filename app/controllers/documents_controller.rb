@@ -15,11 +15,10 @@ class DocumentsController < ApplicationController
     end
   end
 
-
   def create
     document = Document.new(document_params)
-    if document.save!
-      render :index, notice: 'CPF adicionado a lista com sucesso.'
+    if document.save
+      redirect_to documents_path, notice: 'CPF adicionado a lista com sucesso.'
     else
       render :index
     end
