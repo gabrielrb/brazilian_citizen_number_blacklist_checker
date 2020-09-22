@@ -1,7 +1,7 @@
 class DocumentsController < ApplicationController
 
   def show
-    @documents = CitizenNumber.all
+    @documents = Document.all
     @search = params["search"]
     if @search.present?
       @number = @search["number"]
