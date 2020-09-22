@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-CitizenNumber.destroy_all
+Document.destroy_all
 
 
 5.times do
-  CitizenNumber.new(number: Faker::IDNumber.brazilian_citizen_number).save!
+  Document.new(number: Faker::IDNumber.brazilian_citizen_number).save!
 end

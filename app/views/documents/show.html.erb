@@ -3,9 +3,9 @@
     <%= f.input :number, input_html: {value: ""} %>
     <%= f.submit "Search", class: "btn btn-primary" %>
   <% end %>
-  <% unless @citizen_number.nil? %>
+  <% unless @document.nil? %>
     <div class="col-xs-12 col-sm-8 offset-sm-2">
-      <h1>CPF: <%= @citizen_number.number %></h1>
+      <h1>CPF: <%= @document.number %></h1>
     </div>
   <% end %>
 </div>
