@@ -18,7 +18,7 @@ class DocumentsController < ApplicationController
   def create
     document = Document.new(document_params)
     if document.save
-      redirect_to documents_path, notice: 'CPF adicionado a lista com sucesso.'
+      redirect_to documents_path, notice: 'Document number added successfully.'
     else
       render :index
     end
@@ -28,7 +28,7 @@ class DocumentsController < ApplicationController
     @document = Document.find(params[:id])
     @document.destroy
 
-    redirect_to documents_path, notice: "CPF excluído da lista com sucesso"
+    redirect_to documents_path, notice: "Document number excluded successfully"
   end
 
   private
