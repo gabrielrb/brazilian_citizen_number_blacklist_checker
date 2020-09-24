@@ -1,7 +1,15 @@
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.status-container {
+  width: 600px;
+  margin: 200px auto;
+  padding: 0.375rem 0.75rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  text-align : center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .counter {

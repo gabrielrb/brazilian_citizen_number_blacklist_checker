@@ -1,8 +1,12 @@
-<div class="flex-center mt-4">
-  <div class="counter">
-    <span><%= @document_count %></span>
-  </div>
+<div class="status-container">
   <div>
-    <span><%= time_ago_in_words(@uptime) %></span>
+    <h1 class="mt-3 border-bottom"><strong>STATUS</strong></h1>
+  </div>
+  <div class="mt-4 border-bottom">
+    <h3>Our blacklist contains <strong><%= @document_count %></strong> "CPF" numbers.</h3>
+  </div>
+  <br>
+  <div>
+    <h3>The server is up for <strong><%= time_ago_in_words(@uptime) %></strong></h3>
   </div>
 </div>
