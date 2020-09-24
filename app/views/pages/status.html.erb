@@ -3,6 +3,6 @@
     <span><%= @document_count %></span>
   </div>
   <div>
-    <span><%= @uptime %></span>
+    <span><%= time_ago_in_words(@uptime) %></span>
   </div>
 </div>
