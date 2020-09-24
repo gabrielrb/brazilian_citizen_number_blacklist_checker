@@ -1,3 +1,11 @@
+function eraseResults(errorsList) {
+  while (errorsList.firstChild) {
+    console.log(errorsList.firstChild)
+    errorsList.removeChild(errorsList.firstChild)
+  }
+}
+
+
 function renderErrors(errors) {
   return errors.reduce((html, error) => {
     html += `<li>${error}</li>`
@@ -17,10 +25,7 @@ function validateForm() {
   searchButton.addEventListener("click", (event) => {
     if (cpfInput) {
       const errorsList = document.querySelector('.errors-list');
-      while (errorsList.firstChild) {
-        console.log(errorsList.firstChild)
-        errorsList.removeChild(errorsList.firstChild)
-      }
+      eraseResults(errorsList);
       errors = [];
       const cpfValue = cpfInput.value;
       if (cpfValue.length === 0) {
@@ -39,8 +44,3 @@ function validateForm() {
 
 
 export { validateForm }
-
-
-// validates :number, presence: { message: "CPF cannot be blank." }
-// validates :number, length: { is: 11, message: "CPF must have 11 digits." }
-// validates :number, numericality: { only_integer: true, message: "Type only numbers." }

@@ -15,22 +15,29 @@
     <div class="mt-4 col-6">
       <%= simple_form_for :search, url: root_path, input_html: {id: :form}, method: "GET" do |f| %>
         <%= f.input :number, input_html: {value: "", id: :cpf}, label: "CPF:", placeholder: "Type here the document number" %>
+        <div class="errors">
+          <ul class="errors-list">
+          </ul>
+        </div>
         <%= f.submit "Search on the blacklist", id: "search-button", class: "btn btn-warning rounded-pill" %>
       <% end %>
     </div>
-    <div class="errors">
-      <ul class="errors-list">
-      </ul>
-    </div>
     <% if @document.present? %>
       <div class="mt-4 col-6">
-        <h1>CPF: <%= @document_number %> - BLOCK</h1>
-        <%= link_to "Remove from blacklist", document_path(@document), method: :delete, remote: true, data: { confirm: 'Are you sure?' }, class: "btn btn-warning rounded-pill" %>
+        <div class="row">
+          <div class="col-6">
+            <h5>CPF: <%= @document_number %></h5>
+            <h5>BLOCK</h5>
+          </div>
+          <div class="col-6">
+            <%= link_to "Remove from blacklist", document_path(@document), method: :delete, remote: true, data: { confirm: 'Are you sure?' }, class: "btn btn-warning rounded-pill" %>
+          </div>
+        </div>
       </div>
     <% end %>
     <% if @document.nil? && @document_number.present? %>
       <div class="mt-4 col-6">
-        <h1>CPF: <%= @document_number %> - FREE</h1>
+        <h3>CPF: <%= @document_number %> - FREE</h3>
         <%= simple_form_for (@new_document), remote: true do |f| %>
           <%= f.input :number, as: :hidden, input_html: { value: @document_number } %>
           <%= f.submit 'Add to the blacklist', class: 'btn btn-warning rounded-pill' %>
