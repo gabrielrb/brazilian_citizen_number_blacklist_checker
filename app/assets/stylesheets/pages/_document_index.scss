@@ -1,0 +1,13 @@
+.document-container {
+  width: 700px;
+  margin: 0 auto;
+  padding: 0.375rem 0.75rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+
+  .result {
+    text-align: center;
+  }
+}
