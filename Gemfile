@@ -33,6 +33,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'faker', '~> 2.14'
 gem 'bootstrap', '~> 5.0.0.alpha1'
+gem 'turbolinks_render'
 
 group :development, :test do
   gem 'pry-byebug'
