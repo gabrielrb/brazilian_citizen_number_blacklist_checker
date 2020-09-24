@@ -1,3 +1,3 @@
 json.array! @documents do |document|
-  json.extract! document, :id, :number
+  json.extract! document, :number
 end
