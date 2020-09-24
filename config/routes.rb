@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :documents, only: [ :index, :show ]
+      resources :documents, only: [ :index ]
+      get "documents/*number", to: "documents#show"
     end
   end
 end

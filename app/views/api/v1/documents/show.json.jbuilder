@@ -1,1 +1,1 @@
-json.extract! @document, :id, :number
+json.extract! @document, :number

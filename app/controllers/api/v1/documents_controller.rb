@@ -10,6 +10,6 @@ class Api::V1::DocumentsController < Api::V1::BaseController
   private
 
   def set_document
-    @document = Document.find(params[:id])
+    @document = Document.find_by(number: params[:number])
   end
 end
