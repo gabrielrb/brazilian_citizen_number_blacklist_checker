@@ -1,5 +1,5 @@
 class Api::V1::DocumentsController < Api::V1::BaseController
   def index
-    @documents = Documents.all
+    @documents = Document.all
   end
 end
