@@ -6,7 +6,7 @@ class DocumentsController < ApplicationController
     @documents = Document.all
     @search = params["search"]
     if @search.present?
-      @number = @search["number"]
+      @number = @search["number"].gsub(/[-\.]/, '')
       @document = Document.where(number: @number).last
       if @document.nil?
         return @document_number = @number
