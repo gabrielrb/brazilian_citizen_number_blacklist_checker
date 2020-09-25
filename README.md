@@ -10,10 +10,10 @@ The first thing you will see on the application's home page will be a search for
 - If it is blocked, it means that it is blacklisted, and the option to remove it from there will appear. Otherwise, if the number is not in the list, the option to add it will appear.
 
 The application also offers an API, where you have access to all "CPF" numbers included in the blacklist, in `JSON` format.
-- To access all numbers, you can enter the address `http://localhost:3000/api/v1/documents`.
-- If you want to search for a specific "CPF", you can access the same address above, adding the number searched for at the end. E.g. `http://localhost:3000/api/v1/documents/01052084346`.
+- To access all numbers, you can access it through the endpoint `/api/v1/documents`.
+- If you want to search for a specific "CPF", you can access it through the endpoint above, adding the number searched for at the end. E.g. `/api/v1/documents/01052084346`.
 
-Furthermore, the application also has a status page, where you can check how many "CPF" numbers are in the database, as well as server uptime information. To check it out, just type `http://localhost:3000/status`.
+Furthermore, the application also has a status page, where you can check how many "CPF" numbers are in the database, as well as server uptime information. To check it out, you can access it through the endpoint `/status`.
 
 
 ## To do
