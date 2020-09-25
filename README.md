@@ -15,3 +15,10 @@ The application also offers an API, where you have access to all "CPF" numbers i
 
 Furthermore, the application also has a status page, where you can check how many "CPF" numbers are in the database, as well as server uptime information. To check it out, just type `http://localhost:3000/status`.
 
+
+## To do
+___
+
+ - Use of Docker containers and PostgreSQL database via Docker
+ - Add mask to search form
+ - Write Tests
