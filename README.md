@@ -3,6 +3,8 @@
 
 With this app you can not only check if a "CPF" number is included in a blacklist, but also add or remove said number from that blacklist.
 
+You can check it out in: <https://cpfblacklistchecker.herokuapp.com>
+
 # Structure and Features
 
 The first thing you will see on the application's home page will be a search form, where you can search by "CPF" number.
