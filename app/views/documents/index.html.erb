@@ -23,7 +23,7 @@
     <div class="result mt-4">
       <div>
         <div>
-          <h5>CPF: ***.***.***-** </h5>
+          <h5>CPF: <%= @document_number %></h5>
           <h3><strong>BLOCK</strong></h3>
         </div>
         <div>
@@ -34,7 +34,7 @@
   <% end %>
   <% if @document.nil? && @document_number.present? %>
     <div class="result mt-4">
-      <h5>CPF: ***.***.***-** </h5>
+      <h5>CPF: <%= @document_number %></h5>
       <h3><strong>FREE</strong></h3>
       <%= simple_form_for (@new_document), remote: true do |f| %>
         <%= f.input :number, as: :hidden, input_html: { value: @document_number } %>
